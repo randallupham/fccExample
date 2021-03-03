@@ -1,5 +1,6 @@
 {
 	"name": "fcc-learn-npm-package-json",
+        "version": "1.0.0",
         "author": "Randall Upham",
         "description": "Free Code Camp Project",
 	"dependencies": {
