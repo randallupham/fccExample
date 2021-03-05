@@ -7,7 +7,13 @@ function rootGetHandler(req, res) {
   res.sendFile(indexPath);
 }
 
+function jsonGetHandler(req, res) {
+  var responseObj = { "message": "Hello json" };
+  res.json(responseObj);
+}
+
 app.get('/', rootGetHandler);
+app.get('/json', jsonGetHandler);
 app.use('/public', express.static(__dirname + '/public'));
 
 
