@@ -8,6 +8,7 @@ function rootGetHandler(req, res) {
 }
 
 app.get('/', rootGetHandler);
+app.use('/public', express.static(__dirname + '/public'));
 
 
 
