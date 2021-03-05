@@ -1,11 +1,10 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
 function rootGetHandler(req, res) {
-  var responseString = 'Hello World';
-  console.log('Request = ' + req);
-  console.log('Response will be "' + responseString + '"');
-  res.send(responseString);
+  var indexPath = path.join(__dirname, '/views/index.html');
+  res.sendFile(indexPath);
 }
 
 app.get('/', rootGetHandler);
